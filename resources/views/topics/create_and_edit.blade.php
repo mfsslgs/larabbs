@@ -74,10 +74,10 @@
             textarea: $('#editor'),
             upload:{
               url:'{{route('topics.upload_image')}}',
-              param:{_token:'{{csrf_token()}}'},
+              params:{_token:'{{csrf_token()}}'},
               fileKey:'upload_file',
               connectionCount:3,
-              leaveConfirm:'文件上传中，关闭此页面将取消上传。'
+              leaveConfirm:'文件上传中，关闭此页面将取消上传。',
             },
             pasteImage:true,
         });
