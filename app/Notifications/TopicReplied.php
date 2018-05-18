@@ -18,7 +18,7 @@ class TopicReplied extends Notification
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Reply $reply)
     {
         $this->reply = $reply;
     }
@@ -31,7 +31,7 @@ class TopicReplied extends Notification
      */
     public function via($notifiable)
     {
-        return ['databse'];
+        return ['database'];
     }
 
     public function toDatabase($notifiable){
