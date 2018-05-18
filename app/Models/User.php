@@ -5,10 +5,21 @@ namespace App\Models;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Models\Topic;
+use Auth;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable{
+      notify as protected laravelNotify;
+    }
+
+    public function notify($instance){
+      if($this->id == Auth::id()){
+        return;
+      }
+      $this->increment('notification_count');
+      $this->laravelNotify($instance);
+    }
 
     /**
      * The attributes that are mass assignable.
