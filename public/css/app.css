@@ -8368,6 +8368,19 @@ body {
   margin-top: 0px;
 }
 
+.navbar-static-top .dropdown-menu {
+  padding: 0px;
+}
+
+.navbar-static-top .dropdown-menu li a {
+  border-bottom: 1px solid #d8d8d8;
+  line-height: 2.4;
+}
+
+.navbar-static-top .dropdown-menu li a .glyphicon {
+  margin-right: 8px;
+}
+
 /* Sticky footer styles */
 
 html {
@@ -8477,21 +8490,6 @@ body {
   margin-bottom: 12px;
   border: 0;
   border-top: 1px solid #dcebf5;
-}
-
-/* header */
-
-.navbar-static-top .dropdown-menu {
-  padding: 0px;
-}
-
-.navbar-static-top .dropdown-menu li a {
-  border-bottom: 1px solid #d8d8d8;
-  line-height: 2.4;
-}
-
-.navbar-static-top .dropdown-menu li a .glyphicon {
-  margin-right: 8px;
 }
 
 /* Topic Show Page */
@@ -8987,5 +8985,22 @@ body {
 
 .notifications-badge .badge-hint {
   background-color: #d15b47 !important;
+}
+
+/* Sidebar */
+
+.sidebar .panel-body {
+  padding: 12px;
+}
+
+.sidebar hr {
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.sidebar .active-users a.media {
+  color: #797878;
+  line-height: 26px;
+  font-size: 0.9em;
 }
 
